@@ -68,6 +68,14 @@
         "api-reference/endpoint/create",
         "api-reference/endpoint/delete"
       ]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "authentication",
+        "authentication/restapi",
+        "authentication/graphql"
+      ]
     }
   ],
   "footerSocials": {
