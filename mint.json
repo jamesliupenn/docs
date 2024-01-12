@@ -60,7 +60,14 @@
     {
       "group": "Getting Started",
       "pages": [
-        "getting-started/authentication"
+        "getting-started/authentication",
+        {
+          "group": "Authentication",
+          "pages": [
+            "getting-started/authentication/rest-auth",
+            "getting-started/authentication/graphql-auth"
+          ]
+      }
       ]
     },
     {
