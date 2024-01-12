@@ -27,12 +27,8 @@
   },
   "tabs": [
     {
-      "name": "REST API Reference",
+      "name": "API Reference",
       "url": "api-reference"
-    },
-    {
-      "name": "GraphQL API Reference",
-      "url": "graphql-api-reference"
     }
   ],
   "anchors": [
@@ -59,7 +55,10 @@
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/rest",
+        "api-reference/graphql"
+      ]
     },
     {
       "group": "Devices API",
