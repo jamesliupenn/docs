@@ -3,7 +3,8 @@
   "name": "DIMO",
   "logo": {
     "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "light": "/logo/light.png",
+    "href": "devhub"
   },
   "favicon": "/favicon.png",
   "colors": {
