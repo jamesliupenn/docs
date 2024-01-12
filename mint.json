@@ -65,14 +65,6 @@
       "pages": [
         "api-reference/devices-api/device"
       ]
-    },
-    {
-      "group": "Getting Started",
-      "pages": [
-        "authentication",
-        "authentication/restapi",
-        "authentication/graphql"
-      ]
     }
   ],
   "footerSocials": {
