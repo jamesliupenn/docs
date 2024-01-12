@@ -27,6 +27,10 @@
   },
   "tabs": [
     {
+      "name": "Getting Started",
+      "url": "getting-started"
+    },
+    {
       "name": "API Reference",
       "url": "api-reference"
     }
