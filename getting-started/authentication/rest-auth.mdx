@@ -80,6 +80,63 @@ To sign the `challenge`, you will need to use a library in your preferred progra
 
 ### Step 3: Submit Challenge
 
+<CodeGroup>
+
+    ```curl cURL
+    curl --location 'https://auth.dev.dimo.zone/auth/web3/submit_challenge' \
+    --header 'Accept: application/json' \
+    --header 'Content-Type: application/json' \
+    --data '{"client_id":"<client_id>","domain":"<redirect_uri>","grant_type":"authorization_code","state":"<state>","signature":"<signature>"}'
+    ```
+
+    ```js NodeJS
+    var request = require('request');
+    var options = {
+        'method': 'POST',
+        'url': 'https://auth.dev.dimo.zone/auth/web3/submit_challenge',
+        'headers': {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "client_id": "<client_id>",
+            "domain": "<redirect_uri>",
+            "grant_type": "authorization_code",
+            "state": "<state>",
+            "signature": "<signature>"
+        })
+    };
+    
+    request(options, function (error, response) {
+        if (error) throw new Error(error);
+        console.log(response.body);
+    });
+    ```
+
+    ```python Python
+    import requests
+    import json
+
+    url = "https://auth.dev.dimo.zone/auth/web3/submit_challenge"
+
+    payload = json.dumps({
+        "client_id": "<client_id>",
+        "domain": "<redirect_uri>",
+        "grant_type": "authorization_code",
+        "state": "<state>",
+        "signature": "<signature>"
+    })
+    headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+    print(response.text)
+    ```
+</CodeGroup>
+
 <Check>
 If you made it this far, you should have an `access_token` that you can use to access the DIMO REST APIs.
 </Check>
