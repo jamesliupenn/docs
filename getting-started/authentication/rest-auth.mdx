@@ -22,7 +22,7 @@ You will need to first generate the Web3 challenge by sending a `POST` request t
 <CodeGroup>
 
     ```curl cURL
-    curl --location --request POST 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string' \
+    curl --location --request POST 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=<client_id>&domain=<redirect_uri>>&scope=<scope>&response_type=code&address=<0xA>' \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json'
     ```
@@ -31,7 +31,7 @@ You will need to first generate the Web3 challenge by sending a `POST` request t
     var request = require('request');
     var options = {
         'method': 'POST',
-        'url': 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string',
+        'url': 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=<client_id>&domain=<redirect_uri>>&scope=<scope>&response_type=code&address=<0xA>',
         'headers': {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ You will need to first generate the Web3 challenge by sending a `POST` request t
     import requests
     import json
 
-    url = "https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string"
+    url = "https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=<client_id>&domain=<redirect_uri>>&scope=<scope>&response_type=code&address=<0xA>"
 
     payload = {}
     headers = {
@@ -62,9 +62,22 @@ You will need to first generate the Web3 challenge by sending a `POST` request t
 </CodeGroup>
 
 ```json Sample Responses
-SignedMessage(messageHash=HexBytes('0x629749f84ee0d301f8eb02f3ef897b0c0a4553d2fdxd1fa0ea5cbbb6ff8bdfd5'), r=48064598734910045938712268846365002327886250846331651560012768739017714013389, s=54468135635475555126928311975236101130284121664770021136367631881584318718503, v=27, signature=HexBytes('0x6a43994c94195bf873b1025ae5778768a6311fb846bc21f5aeffc71f058394cd786bdf4d27e43e9a2358a4a0018f1af0333cbbf6318d6dd2be929e5f3fc9a2271b'))
+{
+  "state":"jot5csziknrzscg2wcbtgaofu",
+  "challenge":"auth.dev.dimo.zone wants you to sign in with your Ethereum account:\n<YOUR_ADDRESS>\n\n<host> is asking you sign in.\n\nURI: https://auth.dev.dimo.zone\nVersion: 1\nChain ID: 1\nNonce: 4P8AfZTqj9QwDM8tKc2vfIqQogxpXK\nIssued At: 2024-01-08T15:31:15Z"
+}
 ```
 
 ### Step 2: Sign Challenge
 
+You will need to format the `challenge` string from Step 1 to hex and prefix it with `0x`, combine that with the `address` you provided earlier, in order to sign the Ethereum transaction and obtain a 65-byte `signature`.
+
+To sign the `challenge`, you will need to use a library in your preferred programming language to sign Ethereum transactions and messages with local private keys.
+
+
+
 ### Step 3: Submit Challenge
+
+<Check>
+If you made it this far, you should have an `access_token` that you can use to access the DIMO REST APIs.
+</Check>
