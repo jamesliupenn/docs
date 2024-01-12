@@ -79,43 +79,43 @@
     {
       "group": "Device Data API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/device-data-api/overview"
       ]
     },
     {
       "group": "Device Definitions API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/device-definitions-api/overview"
       ]
     },
     {
       "group": "Events API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/events-api/overview"
       ]
     },
     {
       "group": "Token Exchange API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/token-exchange-api/overview"
       ]
     },
     {
       "group": "Trips API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/trips-api/overview"
       ]
     },
     {
       "group": "Users API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/users-api/overview"
       ]
     },
     {
       "group": "Vehicle Signal Decoding API",
       "pages": [
-        "api-reference/devices-api/overview"
+        "api-reference/vehicle-signal-decoding-api/overview"
       ]
     }
   ],
