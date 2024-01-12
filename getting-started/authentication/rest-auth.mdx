@@ -63,12 +63,22 @@ You will need to first generate the Web3 challenge by sending a `POST` request t
     ```
 </CodeGroup>
 
-```json Sample Responses
-{
-  "state":"jot5csziknrzscg2wcbtgaofu",
-  "challenge":"auth.dev.dimo.zone wants you to sign in with your Ethereum account:\n<YOUR_ADDRESS>\n\n<host> is asking you sign in.\n\nURI: https://auth.dev.dimo.zone\nVersion: 1\nChain ID: 1\nNonce: 4P8AfZTqj9QwDM8tKc2vfIqQogxpXK\nIssued At: 2024-01-08T15:31:15Z"
-}
-```
+<CodeGroup>
+    ```json Sample Responses - 200
+    {
+        "state":"jot5csziknrzscg2wcbtgaofu",
+        "challenge":"auth.dev.dimo.zone wants you to sign in with your Ethereum account:\n<YOUR_ADDRESS>\n\n<host> is asking you sign in.\n\nURI: https://auth.dev.dimo.zone\nVersion: 1\nChain ID: 1\nNonce: 4P8AfZTqj9QwDM8tKc2vfIqQogxpXK\nIssued At: 2024-01-08T15:31:15Z"
+    }
+    ```
+
+    ```
+    404: Not Found - Invalid client_id
+    ```
+
+    ```
+    400: Bad Request - Unregistered redirect_uri
+    ```
+</CodeGroup>
 
 ### Step 2: Sign Challenge
 
@@ -136,6 +146,24 @@ To sign the `challenge`, you will need to use a library in your preferred progra
     print(response.text)
     ```
 </CodeGroup>
+
+<CodeGroup>
+    ```json Sample Responses - 200
+    {
+        "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc4ZjVkNDk3ZjVjZDM3MzljYjNhYmZhZDExZjRhZWQ2ZWQxNmNhMWYifQ.eyJpc3MiOiJodHRwczovL2F1dGguZGV2LmRpbW8uem9uZSIsInByb3ZpZGVyX2lkIjoid2ViMyIsInN1YiI6IkNpb3dlR1k1UkRJMk16SXpRV0kwT1RFM09VRTJaRFUzUXpJMk5URTFRakF4UkdVd01UZzFOVE0zT0RjU0JIZGxZak0iLCJhdWQiOiJ2ZWhpY2xlLWdlbml1cyIsImV4cCI6MTcwNTkzNTg5MCwiaWF0IjoxNzA0NzI2MjkwLCJhdF9oYXNoIjoiQnBVZXJtcmJMMUlNVkxNdXpELW93USIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZXRoZXJldW1fYWRkcmVzcyI6IjB4ZjlEMjYzMjNBYjQ5MTc5QTZkNTddMjY1MTVCMDFEZTAxODU1Mzc4NyJ9.BrZeLozHwFxQoyTnpe9TVjoFFyqh3xs2xi6KQrguQGyyWoqFr03SjDCbY_Les6IUI9JD_xWf9bu04w82LD0NqsnO7nqrYwrVwriYUmh1cZskZPUDrL5_kMaN0FxQa-ea9g4ruVEXLU_aM206q2Wp7qqyjd5AhuPAgqAL6mDGviGXr2lJYfxrs0eclO9-w4Z4XO0hRkLO_ODhCDrBeKcwPHEmhTNH6Vw0ReI_05FwIFzz_biIpS6rj45F0nSLrMcJx-2UD9upaMDzLwA_9QPoXzoA3hfdPNKGPU0KEgMJF9thFa2K0daqXqAMXUkxwOSSYWdn58Z8NJGFWN6bzyJqC3",
+        "token_type": "bearer",
+        "expires_in": 1209599,
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc4ZjVkNDk3ZjVjZDM3MzljYjNhYmZhZDExZjRhZWQ2ZWQxNmNhMWYifQ.eyJpc3MiOiJodHRwczovL2F1dGguZGV2LmRpbW8uem9usSIsInByb3ZpZGVyX2lkIjoid2ViMyIsInN1YiI6IkNpb3dlR1k1UkRJMk16SXpRV0kwT1RFM09VRTJaRFUzUXpJMk5URTFRakF4UkdVd01UZzFOVE0zT0RjU0JIZGxZak0iLCJhdWQiOiJ2ZWhpY2xlLWdlbml1cyIsImV4cCI6MTcwNTkzNTg5MCwiaWF0IjoxdzA0NzI2MjkwLCJhdF9oYXNoIjoibGdyZGx5UXhWVWlMY0o1ZWxmTU1odyIsImNfaGFzaCI6IkZid2NTVUlJcnl0S2xVblZHWjE4Z3ciLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImV0aGVyZXVtX2FkZHJlc3MiOiIweGY5RDI2MzIzQWI0OTE3OUE2ZDU3QzI2ETE1QjAxRGUwMTg1NTM3ODcifQ.afO4QhbCfzWZpB_VQhTuJBONA8hYMc8Dw97kNdDBwbYWCIZ_PFzIRUPJe75k19Y0oKm8hNeadyzV36x4uvv4wagfjEPXcttqzoiRrnFjwX5tHZgNaRSznBf6W6PoNzkx7GyGWmeW_AtV3Y4g_fDhC2PKVZeWlw346Prchf_mLDuC5d6HSydu4LoSGHRVhMXlbbwoXGcc3Jui-wMxli8gYx1N__5DXiGvasZgmZefRq9DqPhd5Nlp0AV7bDSSLVJOUZJybbHT153les-_IzMlyqowxrAaJl9ENk5ME5ak4g_gHUpJzPQAf3oe61K-sYKNUYcguah73xfysmbWc_bFsg"
+    }
+    ```
+    ```json 400
+    {
+        "status": 400,
+        "message": "Requested resource does not exist."
+    }
+    ```
+</CodeGroup>
+
 
 <Check>
 If you made it this far, you should have an `access_token` that you can use to access the DIMO REST APIs.
