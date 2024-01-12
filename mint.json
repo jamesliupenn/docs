@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "https://dimo.zone"
+      "url": "mailto:support@dimo.zone"
     }
   ],
   "topbarCtaButton": {
@@ -33,19 +33,19 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Governance",
+      "icon": "file-signature",
+      "url": "https://docs.dimo.zone/governance/"
     },
     {
       "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "icon": "discord",
+      "url": "https://discord.com/invite/dimonetwork"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/DIMO-Network"
     }
   ],
   "navigation": [
