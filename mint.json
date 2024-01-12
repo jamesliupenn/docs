@@ -27,8 +27,12 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "REST API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "GraphQL API Reference",
+      "url": "graphql-api-reference"
     }
   ],
   "anchors": [
