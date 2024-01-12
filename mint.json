@@ -50,10 +50,6 @@
   ],
   "navigation": [
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
       "group": "API Documentation",
       "pages": [
         "api-reference/rest",
@@ -76,8 +72,8 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/DIMO_Network",
+    "instagram": "https://www.instagram.com/dimo_network/",
+    "linkedin": "https://www.linkedin.com/company/dimo-network/"
   }
 }
