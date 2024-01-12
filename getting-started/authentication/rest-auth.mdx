@@ -22,42 +22,42 @@ You will need to first generate the Web3 challenge by sending a `POST` request t
 <CodeGroup>
 
     ```curl cURL
-        curl --location --request POST 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string' \
-        --header 'Accept: application/json' \
-        --header 'Content-Type: application/json'
+    curl --location --request POST 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string' \
+    --header 'Accept: application/json' \
+    --header 'Content-Type: application/json'
     ```
 
     ```javascript NodeJS
-        var request = require('request');
-        var options = {
+    var request = require('request');
+    var options = {
         'method': 'POST',
         'url': 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string',
         'headers': {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
-        };
-        request(options, function (error, response) {
+    };
+    request(options, function (error, response) {
         if (error) throw new Error(error);
         console.log(response.body);
-        });
+    });
     ```
 
     ```python Python
-        import requests
-        import json
+    import requests
+    import json
 
-        url = "https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string"
+    url = "https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string"
 
-        payload = {}
-        headers = {
+    payload = {}
+    headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-        }
+    }
 
-        response = requests.request("POST", url, headers=headers, data=payload)
+    response = requests.request("POST", url, headers=headers, data=payload)
 
-        print(response.text)
+    print(response.text)
     ```
 </CodeGroup>
 
