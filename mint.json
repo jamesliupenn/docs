@@ -67,7 +67,19 @@
             "getting-started/authentication/rest-auth",
             "getting-started/authentication/graphql-auth"
           ]
-      }
+        },
+        {
+          "group": "Error Response",
+          "pages": [
+            "getting-started/error-response"
+          ]
+        },
+        {
+          "group": "Developer FAQ",
+          "pages": [
+            "getting-started/developer-faq"
+          ]
+        }
       ]
     },
     {
