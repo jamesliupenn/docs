@@ -72,6 +72,7 @@
     {
       "group": "Devices API",
       "pages": [
+        "api-reference/devices-api/overview",
         "api-reference/devices-api/device"
       ]
     }
