@@ -16,6 +16,48 @@ description: 'Getting Access to the DIMO APIs'
 </Info>
 
 ### Step 1: Generate Challenge
+<CodeGroup>
+
+```curl cURL
+curl --location --request POST 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json'
+```
+
+```javascript NodeJS
+var request = require('request');
+var options = {
+   'method': 'POST',
+   'url': 'https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string',
+   'headers': {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+   }
+};
+request(options, function (error, response) {
+   if (error) throw new Error(error);
+   console.log(response.body);
+});
+```
+
+```python Python
+import requests
+import json
+
+url = "https://auth.dev.dimo.zone/auth/web3/generate_challenge?client_id=string&domain=string&scope=string&response_type=string&address=string"
+
+payload = {}
+headers = {
+   'Accept': 'application/json',
+   'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+</CodeGroup>
+
 
 ### Step 2: Sign Challenge
 
