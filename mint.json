@@ -58,11 +58,11 @@
   ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Getting Started with DIMO",
       "pages": [
-        "getting-started/authentication",
+        "getting-started/overview",
         {
-          "group": "DIMO Auth",
+          "group": "Authentication",
           "pages": [
             "getting-started/authentication/rest-auth",
             "getting-started/authentication/graphql-auth"
