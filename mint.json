@@ -71,7 +71,8 @@
         {
           "group": "Error Response",
           "pages": [
-            "getting-started/error-response"
+            "getting-started/error-response/rest-api-errors",
+            "getting-started/error-response/graphql-api-errors"
           ]
         },
         {
