@@ -62,7 +62,7 @@
       "pages": [
         "getting-started/authentication",
         {
-          "group": "Authentication",
+          "group": "DIMO Auth",
           "pages": [
             "getting-started/authentication/rest-auth",
             "getting-started/authentication/graphql-auth"
