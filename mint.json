@@ -57,6 +57,12 @@
   ],
   "navigation": [
     {
+      "group": "Getting Started",
+      "pages": [
+        "getting-started/authentication"
+      ]
+    },
+    {
       "group": "API Documentation",
       "pages": [
         "api-reference/rest",
