@@ -25,14 +25,17 @@
     "name": "Dashboard",
     "url": "https://dashboard.mintlify.com"
   },
+  "primaryTab": {
+    "name": "Getting Started"
+  },
   "tabs": [
-    {
-      "name": "Getting Started",
-      "url": "getting-started"
-    },
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Blog",
+      "url": "https://dimo.zone/news"
     }
   ],
   "anchors": [
